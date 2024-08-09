@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SettingsName>YAT Command Page Definition</SettingsName>
+  <SettingsVersion>1.0.2</SettingsVersion>
+  <ProductVersion>2.6.1</ProductVersion>
+  <Warning>Modifying structure and/or content may cause undefined behavior!</Warning>
+  <Mark>
+    <TimeStamp>2023-08-24T14:12:11.7067711+07:00</TimeStamp>
+    <UserName>febru</UserName>
+  </Mark>
+  <Page>
+    <PageName>Page 1</PageName>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Home</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>G28</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Absolute Mode (Normal Mode)</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>G90</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Relative Mode (Jog Mode)</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>G91</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Set Posisi</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>G92</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Set Speed Curva</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M205</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>false</IsDefined>
+      <Description />
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines />
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Lg1 on</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M1</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Lg1 off</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M2</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Gripper Servo Buka</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M3</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Gripper Servo Tutup</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M5</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Stepper ON</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M17</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Stepper OFF</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M18</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Fan ON</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M106</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Fan OFF</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M107</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Report Coordinates</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M114</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Report Endstop State</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M119</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Lg3 on (Pump) atau (Laser)</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M6</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Lg3 off (Pump) atau (Laser)</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M7</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Lg2 on (Katub)</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M206</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Lg2 off (Katub)</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M207</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Posisi OK</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>G0 X0 Y140 Z31</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Ke Home</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>G0 X0 Y195 Z130 E0</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Gripper Vacum OFF</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M206</CommandLines>
+      <CommandLines>G4 S0.2</CommandLines>
+      <CommandLines>M7</CommandLines>
+      <CommandLines>M207</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description>Gripper Vacum ON</Description>
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines>M6</CommandLines>
+      <CommandLines>M207</CommandLines>
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+    <Commands>
+      <IsDefined>true</IsDefined>
+      <Description />
+      <DefaultRadix>String</DefaultRadix>
+      <CommandLines />
+      <IsFilePath>false</IsFilePath>
+      <FilePath />
+    </Commands>
+  </Page>
+</Settings>
