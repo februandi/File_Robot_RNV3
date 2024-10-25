@@ -21,10 +21,34 @@ def calibrate():
     serRobot.write(b'G28\r')
     wait_complete_robot()
     pass
+#--------------------------------------------------------------------------------------------
+def Play_robot():
+    serRobot.write(b'G0 Z0\r') #sumbu Z ke posisi 0
+    wait_complete_robot()
+
+    serRobot.write(b'G0 Z50\r') #sumbu Z ke posisi 50
+    wait_complete_robot()
+
+    serRobot.write(b'G0 Z0 E150\r') #sumbu Z dan E ke posisi 0 dan 150 secar bersamaan
+    wait_complete_robot()
+    pass
+
+#tambahkan instruksi lain di sini
+
+#--------------------------------------------------------------------------------------------
 
 calibrate()
 
 while True:
     # Membaca data dari port serial
     data = serRobot.readline().decode('utf-8').strip()
+
+    # jika sensor S1 OFF
+    if "S1 OFF" in data:
+        print("OK")
+        
+        Play_robot()
+
+    time.sleep(0.5)# tunggu sebentar sebelum membaca data lagi 
+      
 

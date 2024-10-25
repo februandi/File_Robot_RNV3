@@ -109,16 +109,12 @@ void setup()
   } else {
     setStepperEnable(false); //ROBOT ADJUSTABLE BY HAND AFTER TURNING ON
     if (HOME_X_STEPPER && HOME_Y_STEPPER && !HOME_Z_STEPPER){
-      Logger::logINFO("ROBOT ONLINE");
       Logger::logINFO("ROTATE ROBOT TO FACE FRONT CENTRE & SEND G28 TO CALIBRATE");
     }
     if (HOME_X_STEPPER && HOME_Y_STEPPER && HOME_Z_STEPPER){
-      Logger::logINFO("ROBOT ONLINE");
       Logger::logINFO("READY CALIBRATION");
-      Logger::logINFO("ok");
     }
     if (!HOME_X_STEPPER && !HOME_Y_STEPPER){
-      Logger::logINFO("ROBOT ONLINE");
       Logger::logINFO("HOME ROBOT MANUALLY & SEND G28 TO CALIBRATE");
     }
   }

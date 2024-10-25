@@ -9,7 +9,8 @@ void Logger::log(String message, int level) {
         logMsg = "ERROR: ";
       break;
       case LOG_INFO:
-        logMsg = "INFO: ";
+        //logMsg = "INFO: ";
+        logMsg;
       break;
       case LOG_DEBUG:
         logMsg = "DEBUG: ";
