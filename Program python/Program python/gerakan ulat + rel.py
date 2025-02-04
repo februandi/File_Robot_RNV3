@@ -3,7 +3,7 @@ import time
 import keyboard
 
 # DEKLARASI PORT
-port = 'COM11' # Lihat nama port dalam Arduino IDE: Tools > Port:
+port = 'COM6' # Lihat nama port dalam Arduino IDE: Tools > Port:
 baud = 115200 # Default 115200
 timeout = None # Biarkan seperti ini
 ser = serial.Serial(port,baud,timeout=timeout)
