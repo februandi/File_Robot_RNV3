@@ -1,0 +1,7 @@
+{
+    "port": "COM5",
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "programmer": "arduino:arduinoasisp",
+    "sketch": "robotRNV3_v2_06.ino"
+}
