@@ -3,7 +3,7 @@ import time
 import keyboard
 
 # DEKLARASI PORT
-port = 'COM11' # Lihat nama port dalam Arduino IDE: Tools > Port:
+port = 'COM16' # Lihat nama port dalam Arduino IDE: Tools > Port:
 baud = 115200 # Default 115200
 timeout = None # Biarkan seperti ini
 ser = serial.Serial(port,baud,timeout=timeout)
@@ -12,24 +12,11 @@ time.sleep(1)
 # DAFTAR PERINTAH YANG AKAN DIEKSEKUSI OLEH ROBOT, UBAH SESUAI KEBUTUHAN
 cmdList = [
 
-"M3",
-"G0 Z-100",
-"M5",
-"G0 Z50 X100 E177 F90",
-"G0 X0",
-"G0 E355 F90",
-"G0 Z-100",
-"M3",
-"G0 Z-30",
-"G0 Z100 E177 F90",
-"G0 E355 F90",
-"G0 Z-100",
-"M5",
-"G0 Z100",
-"G0 E0 F90",
-"G0 Z-100",
-"M3",
-"G0 Z100",
+    "G0 X0,00 Y217,00 Z138,00 E0,00 F0,00",
+    "G0 X0,00 Y217,00 Z112,00 E0,00 F0,00",
+    "G0 X0,00 Y249,00 Z112,00 E0,00 F0,00",
+    "G0 X64,00 Y249,00 Z112,00 E0,00 F0,00",
+    "G0 X-81,00 Y249,00 Z112,00 E0,00 F0,00"
 
 
 ]
@@ -51,13 +38,12 @@ print(ser.readline())
 print(ser.readline())
 
 def tunggu_selesai():
-    waitstatus = 1
     while True:
-        a = ser.readline()
+        a = ser.readline().decode("utf-8").strip()
         print(a)  # Mencetak respons yang diterima
-        if "ok" in a.decode("utf-8"):
-            waitstatus = 0
+        if "ok" in a.lower():  # Gunakan lower() untuk memastikan huruf kecil juga diterima
             break
+
 
 print("")
 mulai = input('Tekan y untuk mulai: ')
@@ -72,19 +58,18 @@ while True:
 
 while True:
     for cmd in bCmdList:
-        ser.write(cmd)
-        #print(cmd)
-        tunggu_selesai()
-        if keyboard.is_pressed('q'): #tahan q sampai robot posisi ok
+        if keyboard.is_pressed('q'):
             ser.write(b'G0 X0 Y140 Z31\r')
-            print("")
-            print("Robot Stop")
-            print("")
-            time.sleep(1) # Menunggu 1 detik
-            print("Stepper akan off dalam 5 detik")
-            print("")
-            time.sleep(5) # Menunggu 5 detik
+            print("\nRobot Stop\n")
+            time.sleep(1)
+            print("Stepper akan off dalam 5 detik\n")
+            time.sleep(5)
             ser.write(b'M18\r')
             tunggu_selesai()
             ser.close()
             exit()
+
+        ser.write(cmd)
+        print(cmd)
+        tunggu_selesai()
+

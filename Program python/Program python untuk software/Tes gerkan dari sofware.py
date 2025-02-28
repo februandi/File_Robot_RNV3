@@ -12,20 +12,23 @@ time.sleep(1)
 # DAFTAR PERINTAH YANG AKAN DIEKSEKUSI OLEH ROBOT, UBAH SESUAI KEBUTUHAN
 cmdList = [
 
-"G0 Z-65",
-"m5",
-"G0 Z50",
-"G0 X100",
-"G0 X-100",
-"G0 Z-55 F180",
-"G0 Z-65",
-"M3",
-"G0 Z0",
-"G0 Z-65",
-"M5",
-"G0 Z0",
-"GO X0",
-"G0 Z100",
+    "G0 X0,00 Y217,00 Z138,00 E0,00 F0,00",
+    "G0 X0,00 Y217,00 Z-91,00 E0,00 F0,00",
+    "VACUM ON",
+    "G0 X0,00 Y217,00 Z-6,00 E0,00 F0,00",
+    "G0 X0,00 Y217,00 Z-6,00 E355,00 F0,00",
+    "G0 X0,00 Y217,00 Z-86,00 E355,00 F0,00",
+    "VACUM OFF",
+    "G0 X0,00 Y217,00 Z-9,00 E355,00 F0,00",
+    "G0 X0,00 Y217,00 Z-9,00 E185,00 F0,00",
+    "G0 X0,00 Y217,00 Z-9,00 E355,00 F0,00",
+    "G0 X0,00 Y217,00 Z-88,00 E355,00 F0,00",
+    "VACUM ON",
+    "G0 X0,00 Y217,00 Z22,00 E355,00 F0,00",
+    "G0 X0,00 Y217,00 Z22,00 E0,00 F0,00",
+    "G0 X0,00 Y217,00 Z-87,00 E0,00 F0,00",
+    "VACUM OFF",
+    "G0 X0,00 Y217,00 Z-56,00 E0,00 F0,00"
 
 
 ]
@@ -47,13 +50,12 @@ print(ser.readline())
 print(ser.readline())
 
 def tunggu_selesai():
-    waitstatus = 1
     while True:
-        a = ser.readline()
+        a = ser.readline().decode("utf-8").strip()
         print(a)  # Mencetak respons yang diterima
-        if "ok" in a.decode("utf-8"):
-            waitstatus = 0
+        if "ok" in a.lower():  # Gunakan lower() untuk memastikan huruf kecil juga diterima
             break
+
 
 print("")
 mulai = input('Tekan y untuk mulai: ')
@@ -68,19 +70,18 @@ while True:
 
 while True:
     for cmd in bCmdList:
-        ser.write(cmd)
-        #print(cmd)
-        tunggu_selesai()
-        if keyboard.is_pressed('q'): #tahan q sampai robot posisi ok
+        if keyboard.is_pressed('q'):
             ser.write(b'G0 X0 Y140 Z31\r')
-            print("")
-            print("Robot Stop")
-            print("")
-            time.sleep(1) # Menunggu 1 detik
-            print("Stepper akan off dalam 5 detik")
-            print("")
-            time.sleep(5) # Menunggu 5 detik
+            print("\nRobot Stop\n")
+            time.sleep(1)
+            print("Stepper akan off dalam 5 detik\n")
+            time.sleep(5)
             ser.write(b'M18\r')
             tunggu_selesai()
             ser.close()
             exit()
+
+        ser.write(cmd)
+        print(cmd)
+        tunggu_selesai()
+
