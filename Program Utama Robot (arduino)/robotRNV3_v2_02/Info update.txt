@@ -1,0 +1,3 @@
+26/03/2025
+1. Bisa request status sensor (M105)
+    kirim "M105" ke serial untuk melihat status sensor
