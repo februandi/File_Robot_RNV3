@@ -1,0 +1,14 @@
+1. Salin path (sesuaikan dengan alamat folder ffmpeg):
+Contoh:
+
+D:\My Project\Projek robot AI manusia\Program AI\ffmpeg-master-latest-win64-gpl-shared\bin
+
+2. Search → Advanced System Settings
+
+3. Klik tab Advanced, lalu pilih Environment Variables
+
+4. Di bagian "System Variables", cari dan pilih Path, lalu klik Edit
+
+5. Klik "New" dan tambahkan path yang sudah kamu salin tadi.
+
+6. Klik OK, lalu Restart komputer agar perubahan diterapkan.
