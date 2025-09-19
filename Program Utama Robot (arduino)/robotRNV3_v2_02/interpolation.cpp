@@ -92,7 +92,7 @@ void Interpolation::setInterpolation(Point p0, Point p1, float av) {
   }
 
   if (v < 5) { //includes 0 = default value
-    v = sqrt(dist) * 10; //set a good value for v
+    v = sqrt(dist) * SPEED_DEFAULT; 
   }
   if (v < 5) {
      v = 5; 
